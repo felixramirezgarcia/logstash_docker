@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+
+  logstash_dev:
+    build:
+      context: logstash_dev/
+    volumes:
+      - ./logstash_dev/config:/usr/share/logstash/config
+      - ./logstash_dev/pipeline:/usr/share/logstash/pipeline
+      - ./logstash_dev/data:/usr/share/logstash/data
+      - ./logstash_dev/plugins:/usr/share/logstash/plugins
+    ports:
+      - "5001:5000"
+    environment:
+      LS_JAVA_OPTS: "-Xmx2048m -Xms2048m"
+    networks:
+      - elk
+
+networks:
+
+  elk:
+    driver: bridge

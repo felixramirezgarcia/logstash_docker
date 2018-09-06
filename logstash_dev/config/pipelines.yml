@@ -1,0 +1,28 @@
+#  - pipeline.id: rss_elmundo_pipe
+#    path.config: "/usr/share/logstash/pipeline/rss_el_mundo_pipe.conf"
+#
+#  - pipeline.id: twitter_pipe
+#    path.config: "/usr/share/logstash/pipeline/twitter_pipe.conf"
+#    pipeline.workers: 1
+#    pipeline.batch.delay: 200
+#    # input => filter + output
+#    pipeline.batch.size: 125
+#  
+#  - pipeline.id: email_pipe
+#    path.config: "/usr/share/logstash/pipeline/email_pipe.conf"
+#
+#  - pipeline.id: facebook_pipe
+#    path.config: "/usr/share/logstash/pipeline/facebook_pipe.conf"
+#
+#  - pipeline.id: crawler_pipe
+#    path.config: "/usr/share/logstash/pipeline/crawler_pipe.conf"
+#
+  - pipeline.id: multi_rss_pipe
+    path.config: "/usr/share/logstash/pipeline/multi_rss_pipe.conf"
+#
+#  - pipeline.id: matomo_rest_pipe
+#    path.config: "/usr/share/logstash/pipeline/matomo_rest_pipe.conf"
+#
+#  - pipeline.id: odoo_pipe
+#    path.config: "/usr/share/logstash/pipeline/odoo_pipe.conf"
+
